@@ -16,7 +16,7 @@
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Suggested agenda for a one day Node Camp</h3>
+        <h3 class="panel-title">Agenda</h3>
       </div>
       <div class="panel-body">
         <table class="table table-bordered table-hover">

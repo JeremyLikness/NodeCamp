@@ -93,7 +93,7 @@ This demo is composed of the following segments:
 
 	_Creating the app.js file_
 
-1. Go back to the command prompt/terminal and run **node app.js** to execute the Node.js console application.
+1. Go back to the command prompt/terminal, or type CTRL+` (back-tick) to open one inside of Visual Studio Code, and run **node app.js** to execute the Node.js console application.
 
 	![Running the Node.js console app](images/VSCode/running-the-console-app.png?raw=true "Running the Node.js console app")
 
