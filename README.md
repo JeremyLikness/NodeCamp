@@ -11,7 +11,7 @@
     <div class="jumbotron">
       <h1>Node Camp</h1>
       <p>
-        <a href="http://aka.ms/CloudCamp-AzureTrial" class="btn btn-success">Sign up for Microsoft Azure</a>
+        <a href="http://aka.ms/azurefreeconnect" class="btn btn-success">Sign up for Microsoft Azure</a>
       </p>
     </div>
     <div class="panel panel-default">
