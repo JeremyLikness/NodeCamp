@@ -356,19 +356,17 @@ We then pass the socket.io instance to the module we created.
 	````
 
 <a name="segment3" />
-### Creating a DocumentDB database account ###
+### Creating a CosmosDB database account ###
 
 1. Sign in to the online [Microsoft Azure portal](https://portal.azure.com/).
 
-1. In the Jumpbar, click **New**, then **Data + Storage**, and **Azure DocumentDB**.
-
-	![Creating a new DocumentDB account](images/VSCode/creating-a-new-documentdb-account.png?raw=true "Creating a new DocumentDB account")
+1. In the Jumpbar, click **New**, then **Databases**, and **Azure CosmosDB**.
 
 	_Creating a new DocumentDB account_
 
-1. In the **New DocumentDB account** blade, specify the desired configuration for the DocumentDB account.
+1. In the **New CosmosDB account** blade, specify the desired configuration for the CosmosDB account.
 
-	![Setting up the new DocumentDB account](images/VSCode/setting-up-the-new-documentdb-account.png?raw=true "Setting up the new DocumentDB account")
+	![Setting up the new CosmosDB account](images/VSCode/setting-up-the-new-cosmosdb-account.png?raw=true "Setting up the new CosmosDB account")
 
 	_Setting up the new DocumentDB account_
 
