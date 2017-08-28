@@ -358,7 +358,7 @@ We then pass the socket.io instance to the module we created.
 <a name="segment3" />
 ### Creating a CosmosDB database account ###
 
-1. Sign in to the online [Microsoft Azure portal](https://portal.azure.com/).
+1. Sign in to the online [Microsoft Azure portal](http://bit.ly/azportal).
 
 1. In the Jumpbar, click **New**, then **Databases**, and **Azure CosmosDB**.
 
