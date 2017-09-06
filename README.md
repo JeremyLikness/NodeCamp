@@ -28,42 +28,42 @@
           <tr>
             <td rowspan="2">Introduction to Node.js</td>
             <td rowspan="2">60</td>
-            <td>Presentation (<a href='Presentation/IntroToNodeJS/IntroToNodeJS.pptx'>PPTX</a> | <a href='Presentation/IntroToNodeJS/IntroToNodeJS.html'>HTML</a>)</td>
+            <td>Presentation (<a href='Presentation/IntroToNodeJS/IntroToNodeJS.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td>Demos (<a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo-VSCode.md'>Visual Studio Code</a>)</td>
+            <td>Demos (<a href='Presentation/IntroToNodeJS/IntroToNodeJS/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Introduction to Express Framework</td>
             <td rowspan="2">60</td>
-            <td>Presentation (<a href='Presentation/IntroToExpress/IntroToExpress.pptx'>PPTX</a> | <a href='Presentation/IntroToExpress/IntroToExpress.html'>HTML</a>)</td>
+            <td>Presentation (<a href='Presentation/IntroToExpress/IntroToExpress.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td>Demos (<a href='Presentation/IntroToExpress/IntroToExpress/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/IntroToExpress/IntroToExpress/Demo-VSCode.md'>Visual Studio Code</a>)</td>
+            <td>Demos (<a href='Presentation/IntroToExpress/IntroToExpress/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Building the Backend</td>
             <td rowspan="2">60</td>
-            <td>Presentation (<a href='Presentation/BuildingTheBackend/BuildingTheBackend.pptx'>PPTX</a> | <a href='Presentation/BuildingTheBackend/BuildingTheBackend.html'>HTML</a>)</td>
+            <td>Presentation (<a href='Presentation/BuildingTheBackend/BuildingTheBackend.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td>Demos (<a href='Presentation/BuildingTheBackend/BuildingTheBackend/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/BuildingTheBackend/BuildingTheBackend/Demo-VSCode.md'>Visual Studio Code</a>)</td>
+            <td>Demos (<a href='Presentation/BuildingTheBackend/BuildingTheBackend/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Creating the User Interface</td>
             <td rowspan="2">60</td>
-            <td>Presentation (<a href='Presentation/CreatingTheUI/CreatingTheUI.pptx'>PPTX</a> | <a href='Presentation/CreatingTheUI/CreatingTheUI.html'>HTML</a>)</td>
+            <td>Presentation (<a href='Presentation/CreatingTheUI/CreatingTheUI.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td>Demos (<a href='Presentation/CreatingTheUI/CreatingTheUI/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/CreatingTheUI/CreatingTheUI/Demo-VSCode.md'>Visual Studio Code</a>)</td>
+            <td>Demos (<a href='Presentation/CreatingTheUI/CreatingTheUI/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Connecting the Frontend to the Backend</td>
             <td rowspan="2">60</td>
-            <td>Presentation (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack.pptx'>PPTX</a> | <a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack.html'>HTML</a>)</td>
+            <td>Presentation (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td>Demos (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCode.md'>Visual Studio Code</a>)</td>
+            <td>Demos (<a href='Presentation/ConnectingFrontAndBack/ConnectingFrontAndBack/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
           <tr>
             <td rowspan="2">Provisioning, Deploying and Debugging on Azure</td>
