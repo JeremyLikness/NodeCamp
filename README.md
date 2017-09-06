@@ -68,10 +68,10 @@
           <tr>
             <td rowspan="2">Provisioning, Deploying and Debugging on Azure</td>
             <td rowspan="2">60</td>
-            <td>Presentation (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.pptx'>PPTX</a> | <a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.html'>HTML</a>)</td>
+            <td>Presentation (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug.html'>HTML</a>)</td>
           </tr>
           <tr>
-            <td>Demos (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo-VSCommunity.md'>Visual Studio Community</a> | <a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo-VSCode.md'>Visual Studio Code</a>)</td>
+            <td>Demos (<a href='Presentation/AzureDeployAndDebug/AzureDeployAndDebug/Demo-VSCode.md'>Visual Studio Code</a>)</td>
           </tr>
         </table>
       </div>
