@@ -135,13 +135,7 @@ npm install -g azure-cli
                                 <pre><code class="cmd" data-trim contenteditable>
 azure login
 								</code></pre>
-                            </li>
-                            <li>
-                                Switch to Azure Resource Manager
-                                <pre><code class="cmd" data-trim contenteditable>
-azure config mode arm
-								</code></pre>
-                            </li>
+                            </li>                    
                             <li>
                                 Create a Resource Group
                                 <pre><code class="cmd" data-trim contenteditable>
@@ -149,38 +143,67 @@ azure group create -n "chatroomRG" -l "East US"
 								</code></pre>
                             </li>
                             <li>
-                                Create the Azure resources using a json template
+                                Create a deployment user (only needs to be done once)
                                 <pre><code class="cmd" data-trim contenteditable>
-azure group deployment create -f azuredeploy.json -e
-azuredeploy.parameters.json chatroomRG chatroomDeploy 
+									az webapp deployment user set \
+--user-name &lt;username> --password &lt;password>
 								</code></pre>
                             </li>
                         </ul>
-                    </section>
+					</section>
+					<section>
+                        <h2>Using Azure CLI (Continued)</h2>
+                        <ul>
+                            <li>
+                                Create an app service plan
+                                <pre><code class="cmd" data-trim contenteditable>
+									az appserviceplan create --name chatroomServicePlan \
+--resource-group chatroomRG --sku FREE
+								</code></pre>
+                            </li>                    
+                            <li>
+                                Create a web app (name must be unique)
+                                <pre><code class="cmd" data-trim contenteditable>
+									az webapp create --name nodeChatApp --resource-group \ 
+chatroomRG --plan chatroomServicePlan \
+--deployment-local-git
+								</code></pre>
+                            </li>
+                            <li>
+                                Get remote deployment endpoint
+                                <pre><code class="cmd" data-trim contenteditable>
+									az webapp deployment source config-local-git --name \
+nodeChatApp --resource-group chatroomRG \
+--query url --output tsv
+								</code></pre>
+                            </li>
+                        </ul>
+					</section>
+					<section>
+					<h2>Using Azure CLI (Continued)</h2>
+					<ul>
+						<li>
+							Setup remote deployment endpoint
+							<pre><code class="cmd" data-trim contenteditable>
+								git remote add azure https://...
+							</code></pre>
+						</li>                    
+						<li>
+							Push your app
+							<pre><code class="cmd" data-trim contenteditable>
+								git push azure master
+							</code></pre>
+						</li>
+						<li>
+							Check it out!
+						</li>
+					</ul>
+				</section>
                     <section data-state="demo">
                         <h2>Demo</h2>
                         <h3>Provisioning Azure Resources using Azure CLI</h3>
                     </section>
                 </section>
-
-				<section>
-					<section data-state="head">
-						<h2>Deploying to Azure with Visual Studio</h2>
-					</section>
-					<section>
-						<h2>Visual Studio + App Service Web Apps</h2>
-						<ul>
-							<li>Create Azure Resources during File / New</li>
-                            <li>Create Web App during deploy</li>
-							<li>Manage with Server Explorer</li>
-						</ul>
-						<img data-src="images/visual-studio-azure-service-web-apps.png" alt="Down arrow">
-					</section>
-					<section data-state="demo">
-						<h2>Demo</h2>
-						<h3>Deploying to Azure with Visual Studio</h3>
-					</section>
-				</section>
 
 				<section>
 					<section data-state="head">

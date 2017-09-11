@@ -63,9 +63,9 @@ This demo is composed of the following segments:
 
 <a name="segment1" />
 ### Provisioning Azure resources using Azure CLI ###
-> **Note:** In the following section you will see how to use the Azure CLI tool to create the Azure resources for the web app. If you want you can use the [Azure Portal](https://portal.azure.com/) to perform the same operations.
+> **Note:** In the following section you will see how to use the Azure CLI tool to create the Azure resources for the web app. If you want you can use the [Azure Portal](https://portal.azure.com/) to perform the same operations. Some of the screenshots may reference `Azure` as the command line, but the correct reference is `az`.
 
-1. In the command prompt/terminal run **azure login** to authenticate interactively.
+1. In the command prompt/terminal run **az login** to authenticate interactively.
 
 	![Azure Interactive Login](images/VSCode/cli-azure-interactive-login.png?raw=true "Azure Interactive Login")
 
@@ -75,50 +75,43 @@ This demo is composed of the following segments:
 
 	> **Note:** Interactive authentication is used in this case because it works with either school/work or Microsoft accounts. If you have a school/work account you can also use the non-interactive authentication method, as it's explained [here](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-connect/#use-non-interactive-log-in-with-a-work-or-school-account)
 
-1. Run **azure config mode arm** to switch to Azure CLI Resource Manager commands.
-
-1. Run **azure group create -n "chatroomRG" -l "East US"** to create a new Resource Group named _chatroomRM_. 
+1. Run **az group create -n "chatroomRG" -l "East US"** to create a new Resource Group named _chatroomRG_. 
 
 	![Creating a new Azure Resource Group](images/VSCode/creating-azure-resource-group.png?raw=true "Creating a new Azure Resource Group")
 	
 	_Creating a new Azure Resource Group_
-	
-1. Open the file **azuredeploy.parameters.json** located in the **source/Assets** folder and enter parameter values suitable for your environment:
 
-	- **documentDbAccountName**: the name of the DocumentDB account. Use only lowercase letters, numbers and '-' character.
-	- **siteName**: the name of the Web App that you wish to create.
-	- **appServicePlanName**: the name of the App Service plan to use for hosting the web app.
-	- **East US**: If you want to use a different location for the Web App and the Service Plan.
+1. If you haven't already, set up your deployment user: **az webapp deployment user set --user-name {user} --password {password}**
 
-	> **Note:** You can also add the following parameters for additional configuration: **pricingTier** (The pricing tier for the hosting plan: Free, Standard, Basic, Shared) and **workerSize** (The instance size of the hosting plan: small, medium, or large).
-	
-	
-	````json
-	{
-		"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-		"contentVersion": "1.0.0.0",
-		"parameters": {
-			"databaseAccountName": { 
-			    "value": "documentDbAccountName"
-			},
-			"siteName": {
-			    "value": "siteName"
-			},
-			"appServicePlanName": {
-			    "value": "appServicePlanName"
-			},
-			"siteLocation": {
-			    "value": "East US"
-			}
-		}
-	}
-	````
-	
-1. Run **azure group deployment create -f ..\\..\Assets\azuredeploy.json -e ..\\..\Assets\azuredeploy.parameters.json chatroomRG chatroomWebappDeploy** to execute the deploy and create the Azure resources (Azure Web App and Azure DocumentDB).
+1. Create an app service plan **az appservice plan create --name chatroomServicePlan --resource-group chatroomRG --sku FREE**
 
-	![Creating the Azure Resources](images/VSCode/creating-azure-web-app.png?raw=true "Creating the Azure Resources")
-	
-	_Creating the Azure Resources_
+    ![Creating an app service plan](images/VSCode/cli-serviceplan-create.png)
+
+    _Creating the Service Plan_
+
+1. Create the web app **az webapp create --name nodeChatApp123 --resource-group chatroomRG --plan chatroomServicePlan --deployment-local-git**
+
+   ![Creating the web app](images/VSCode/cli-webapp-create.png)
+
+    _Creating the Web App_
+
+1. Get the remote deployment endpoint **az webapp deployment source config-local-git --name nodeChatApp123 --resource-group chatroomRG --query url --output tsv**
+
+    ![Get the Deployment Endpoint](images/VSCode/cli-get-endpoint.png)
+
+    _Get the Deployment Endpoint_
+
+1. Setup the deployment and push
+
+   ```bash
+   git init
+   git add -A
+   git commit -am "Initial Commit"
+   git remote add azure https://{deploymentuser}@{appname}.scm.azurewebsites.net/{appname}.git
+   git push azure master
+   ```
+
+1. Navigate to the website!
 
 1. Go to the [Azure Portal](https://portal.azure.com/) and check that the Resource Group was successfully provisioned.
 
